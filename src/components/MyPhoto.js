@@ -10,8 +10,8 @@ class MyPhoto extends React.Component {
     render() {
         return (
             <div className="my-photo">
-                <img className="blur" src="../images/my-photo.jpg"/>
-                <img className="image-to-show" src="../images/my-photo.jpg"/>
+                <img className="blur" src="/images/my-photo.jpg"/>
+                <img className="image-to-show" src="/images/my-photo.jpg"/>
             </div>
         );
     }

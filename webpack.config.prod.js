@@ -6,6 +6,7 @@ import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production'),
@@ -69,7 +70,11 @@ export default {
         context: '/',
         postcss: () => [autoprefixer],
       }
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from :'src/images',
+      to : 'images'
+    }])
   ],
   module: {
     rules: [
